@@ -56,10 +56,30 @@ class PostTemplateDetails extends React.Component {
           </div>
           <div className="post-single__footer">
             {tagsBlock}
+            {commentsBlock}
+              <h3>Add a comment</h3>
+              <form
+                method="POST"
+                action="https://staticman3.herokuapp.com/v2/entry/nabildevelop/staticman-tutorial/master/comments"
+              >
+                <input
+                  name="options[slug]"
+                  type="hidden"
+                  value={this.props.pathContext.slug}
+                />
+                <input name="fields[name]" type="text" placeholder="Name" required />
+                <input
+                  name="fields[email]"
+                  type="email"
+                  placeholder="Email"
+                  required
+                />
+                <textarea name="fields[message]" placeholder="Comment" required />
+                <button type="submit">Submit Comment</button>
+              </form>
             <hr />
             <p className="post-single__footer-text">
               {subtitle}
-              {commentsBlock}
               <a
                 href={`https://twitter.com/${author.twitter}`}
                 target="_blank"
