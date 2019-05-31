@@ -3,7 +3,7 @@
 This repo is from a Gatsby Central tutorial here:
 https://www.gatsbycentral.com/tutorial-comments-with-staticman-in-gatsby
 
-This is a copy of the (Gatsby starter
+This is a copy of the [Gatsby starter
 lumen](https://github.com/alxshelepenok/gatsby-starter-lumen)
 
 ## License
